@@ -229,6 +229,7 @@ a {
 .section__news {
     font-family: 'Libre Baskerville', serif;
     margin-left: 99px;
+    margin-bottom: 96px;
 }
 
 .news__subtitle {
@@ -315,10 +316,45 @@ a {
     height: 151px;
     overflow: hidden;
 }
+
 .news__img {
     width: 100%;
 }
+
 .news__item {
-   display: flex;
-   margin-bottom: 41px;
+    display: flex;
+    margin-bottom: 41px;
+}
+.footer {
+    color: white;
+    
+}
+.footer__container {
+    max-width: 1400px;
+    height: 352px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.footer__top {
+    height: 272px;
+    background-color: #414840;
+
+}
+
+.footer__column {
+    display: flex;
+    
+
+}
+.footer__logo-block {
+    width: 269px;
+    flex-direction: column;
+}
+
+.footer__bottom {
+    height: 80px;
+    background-color: #343D33;
 }
