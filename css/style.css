@@ -40,7 +40,6 @@ a {
 }
 
 
-
 .title {
     font-family: 'Libre Baskerville';
     font-style: normal;
@@ -90,6 +89,39 @@ a {
     font-style: italic;
 }
 
+.header__burger {
+    margin-right: 18px;
+    height: 22px;
+    width: 30px;
+    position: relative;
+    display: none;
+    align-items: center;
+}
+
+.header__burger-el {
+    height: 2px;
+    width: 100%;
+    background-color: #21243d;
+    position: relative;
+}
+
+.header__burger-el:before,
+.header__burger-el::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #21243d;
+    position: absolute;
+}
+
+.header__burger-el:before {
+    top: -8px;
+}
+
+.header__burger-el::after {
+    top: 8px;
+}
+
 .nav {
     padding-top: 15px;
 }
@@ -107,6 +139,11 @@ a {
 @media screen and (max-width:768px) {
     .nav__item {
         display: none;
+    }
+
+    .header__burger {
+        left: 0px;
+        display: flex;
     }
 }
 
@@ -298,7 +335,7 @@ a {
 
 .section__news {
     font-family: 'Libre Baskerville', serif;
-    margin-left: 99px;
+    padding-left: 99px;
     margin-bottom: 96px;
 }
 
@@ -318,7 +355,7 @@ a {
     margin-bottom: 48px;
 }
 
-.news__link::before {
+.news__link:before {
     content: '';
     width: 131px;
     height: 2px;
@@ -337,9 +374,7 @@ a {
 }
 
 .news__item--big {
-    width: 519px;
-    height: 518px;
-    margin-right: 50px;
+margin-right: 50px;
     flex-direction: column;
 }
 
@@ -356,7 +391,6 @@ a {
 .news__item-desc {
     margin-top: 10px;
     margin-left: 24px;
-    margin-right: 24px;
     width: 471px;
     height: 146px;
 }
@@ -396,6 +430,38 @@ a {
     margin-bottom: 41px;
 }
 
+@media screen and (max-width:768px) {
+    .section__news {
+
+        padding-left: 10px;
+    }
+
+    .news__content {
+        flex-direction: column;
+    }
+
+    .news__img-wrapp {
+
+        flex-wrap: wrap;
+    }
+
+    .news__item--big {
+
+        flex-direction: row;
+    }
+
+    .news__item-desc {
+        width: 304px;
+    }
+
+    .news__img-wrapp {
+        width: 392px;
+        height: 251px;
+        overflow: hidden;
+    }
+}
+
+
 .footer {
     color: white;
 
@@ -418,6 +484,8 @@ a {
     display: flex;
     flex-direction: column;
     margin-top: 48px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 .footer__logo-block {
@@ -458,6 +526,14 @@ a {
     font-size: 14px;
     margin-bottom: 10px;
 
+}
+
+.footer__nav-link {
+    color: white;
+}
+
+.social__link {
+    color: white;
 }
 
 .social__list {
